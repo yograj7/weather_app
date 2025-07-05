@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  transition: background 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  width: 300px;
+}
+
+.search-box input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 70%;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #ffffff;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #ddd;
+}
+
+.weather-box {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.weather-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.weather-box img {
+  width: 100px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Dynamic backgrounds */
+body.sunny {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+body.rainy {
+  background: linear-gradient(135deg, #6190E8, #A7BFE8);
+}
+
+body.cloudy {
+  background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+}
